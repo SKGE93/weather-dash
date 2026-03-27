@@ -1,1 +1,10 @@
-<p>home works!</p>
+@if (loading()) {
+  <p>Chargement...</p>
+} @else if (meteo()) {
+  <div>
+    <h2>{{ meteo().name }}</h2>
+    <p>{{ meteo().weather[0].description }}</p>
+    <p>{{ meteo().main.temp | number:'1.0-1' }}°C</p>    <p>Humidité : {{ meteo().main.humidity | number:'1.0-1' }}%</p>
+    <p>Vent : {{ meteo().wind.speed | number:'1.0-1' }} km/h</p>
+  </div>
+}
