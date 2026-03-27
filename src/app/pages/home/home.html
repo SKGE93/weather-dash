@@ -1,10 +1,25 @@
 @if (loading()) {
   <p>Chargement...</p>
 } @else if (meteo()) {
-  <div>
-    <h2>{{ meteo().name }}</h2>
-    <p>{{ meteo().weather[0].description }}</p>
-    <p>{{ meteo().main.temp | number:'1.0-1' }}°C</p>    <p>Humidité : {{ meteo().main.humidity | number:'1.0-1' }}%</p>
-    <p>Vent : {{ meteo().wind.speed | number:'1.0-1' }} km/h</p>
+  <div class="container">
+    <div class="weather-card">
+      <h2 class="city-name">{{ meteo().name }}</h2>
+      <p class="description">{{ meteo().weather[0].description }}</p>
+      <p class="temperature">{{ meteo().main.temp | number:'1.0-1' }}°C</p>
+      <div class="details">
+        <div class="detail-item">
+          <span class="detail-label">Humidité</span>
+          <span class="detail-value">{{ meteo().main.humidity }}%</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Vent</span>
+          <span class="detail-value">{{ meteo().wind.speed }} km/h</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Ressenti</span>
+          <span class="detail-value">{{ meteo().main.feels_like | number:'1.0-1' }}°C</span>
+        </div>
+      </div>
+    </div>
   </div>
 }
