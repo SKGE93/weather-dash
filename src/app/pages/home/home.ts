@@ -33,4 +33,10 @@ export class Home implements OnInit {
         }
       })
   }
+
+  rechercherVille(event: Event) {
+  const input = event.target as HTMLInputElement
+  this.ville.set(input.value)
+  this.chargerMeteo()
+}
 }

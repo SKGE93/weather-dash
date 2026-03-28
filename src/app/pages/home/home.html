@@ -2,6 +2,11 @@
   <p>Chargement...</p>
 } @else if (meteo()) {
   <div class="container">
+    <input
+      type="text"
+      placeholder="Rechercher une ville..."
+      (keyup.enter)="rechercherVille($event)"
+    />
     <div class="weather-card">
       <h2 class="city-name">{{ meteo().name }}</h2>
       <p class="description">{{ meteo().weather[0].description }}</p>
