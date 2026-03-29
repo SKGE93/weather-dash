@@ -42,7 +42,7 @@ export class WeatherChart implements OnChanges {
       options: {
         responsive: true,
         plugins: {
-          legend: { labels: { color: '#ffffff' } }
+          legend: { display: false }
         },
         scales: {
           x: { ticks: { color: '#ffffff' } },

@@ -11,6 +11,11 @@
     <div class="weather-card">
       <h2 class="city-name">{{ meteo().name }}</h2>
       <p class="description">{{ meteo().weather[0].description }}</p>
+      <img
+        class="weather-icon"
+        src="https://openweathermap.org/img/wn/{{ meteo().weather[0].icon }}@2x.png"
+        alt="{{ meteo().weather[0].description }}"
+     />
       <p class="temperature">{{ meteo().main.temp | number:'1.0-1' }}°C</p>
       <div class="details">
         <div class="detail-item">
