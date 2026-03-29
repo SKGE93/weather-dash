@@ -1,59 +1,87 @@
 # WeatherDash
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+Application météo interactive construite avec Angular 19 et l'API OpenWeatherMap. Elle affiche la météo en temps réel d'une ville et les prévisions de température sur 24h sous forme de graphique.
 
-## Development server
+---
 
-To start a local development server, run:
+## Pourquoi ce projet ?
 
+Ce projet a été réalisé en dehors du cadre scolaire pour progresser sur des technologies que je n'avais pas encore pratiquées : Angular, TypeScript, et la visualisation de données. Il fait suite à CinéSearch (React) et m'a permis de comparer deux approches différentes du développement frontend.
+
+---
+
+## Fonctionnalités
+
+- Météo en temps réel par ville (température, humidité, vent, ressenti)
+- Icône météo dynamique selon les conditions et l'heure
+- Graphique des températures sur les 24 prochaines heures
+- Recherche de n'importe quelle ville du monde
+- Interface responsive
+
+---
+
+## Technologies utilisées
+
+- **Angular 19** — framework frontend
+- **TypeScript** — langage principal
+- **Chart.js** — bibliothèque de graphiques
+- **HttpClient** — requêtes HTTP natives Angular
+- **OpenWeatherMap API** — données météo en temps réel
+
+---
+
+## Compétences travaillées
+
+- Architecture Angular : composants, services, injection de dépendances
+- TypeScript : typage, interfaces, classes
+- Consommation d'une API REST avec authentification par clé
+- Visualisation de données avec Chart.js
+- Gestion de données imbriquées en JSON
+- Communication entre composants parent/enfant avec `input()`
+
+---
+
+## Installation et déploiement local
+
+### Prérequis
+
+- Node.js installé sur ta machine
+- Un compte OpenWeatherMap (gratuit)
+
+### Étapes
+
+**1. Clone le projet**
+```bash
+git clone https://github.com/TON_USERNAME/weather-dash.git
+cd weather-dash
+```
+
+**2. Installe les dépendances**
+```bash
+npm install
+```
+
+**3. Crée le fichier d'environnement**
+
+Crée un dossier `src/environments/` et dedans un fichier `environment.ts` :
+```typescript
+export const environment = {
+  production: false,
+  apiKey: 'TA_CLE_OPENWEATHERMAP'
+}
+```
+
+Pour obtenir une clé API gratuite : [openweathermap.org/api](https://openweathermap.org/api)
+
+**4. Lance le projet**
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L'application est accessible sur `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Aperçu
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Dashboard météo](screenshots/home.png)
