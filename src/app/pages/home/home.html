@@ -5,6 +5,7 @@
     <input
       type="text"
       placeholder="Rechercher une ville..."
+      class="search-bar"
       (keyup.enter)="rechercherVille($event)"
     />
     <div class="weather-card">
@@ -26,5 +27,8 @@
         </div>
       </div>
     </div>
+    @if (previsions()) {
+      <app-weather-chart [previsions]="previsions()" />
+    }
   </div>
 }

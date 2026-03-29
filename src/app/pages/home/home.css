@@ -54,3 +54,26 @@
   font-size: 1.1rem;
   font-weight: bold;
 }
+
+.search-bar {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar:focus {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}

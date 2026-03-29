@@ -20,4 +20,15 @@ export class WeatherService {
       }
     })
   }
+
+  getPrevisions(ville: string) {
+  return this.http.get(`${this.baseUrl}/forecast`, {
+    params: {
+      q: ville,
+      appid: environment.apiKey,
+      units: 'metric',
+      lang: 'fr'
+    }
+  })
+}
 }
