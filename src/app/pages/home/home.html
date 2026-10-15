@@ -24,7 +24,7 @@
         </div>
         <div class="detail-item">
           <span class="detail-label">Vent</span>
-          <span class="detail-value">{{ meteo().wind.speed }} km/h</span>
+          <span class="detail-value">{{ meteo().wind.speed * 3.6 | number:'1.0-1' }} km/h</span>
         </div>
         <div class="detail-item">
           <span class="detail-label">Ressenti</span>
